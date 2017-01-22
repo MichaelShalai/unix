@@ -1,0 +1,5 @@
+alias ll="ls -la"
+
+# Only used during initial configuration
+# alias install-homebrew="/usr/bin/ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
+# alias gpg-list="gpg --list-secret-keys --keyid-format LONG"

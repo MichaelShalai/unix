@@ -1,0 +1,19 @@
+
+if [ -d $(brew --prefix)/etc/bash_completion.d ]; then
+  . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+  . $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+fi
+
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+
+  NC='\e[0m'
+  LIGHT_GRAY='\e[0;37m'
+
+  GIT_PROMPT_ONLY_IN_REPO=1
+  GIT_PROMPT_THEME_NAME="Custom"
+  GIT_PROMPT_START="\[${LIGHT_GRAY}\]\D{%F %T}\[${NC}\]"
+  GIT_PROMPT_END=" \$ "
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+

@@ -12,4 +12,13 @@ echo "  [include]"
 echo "    path = $DIR/.git-alias"
 echo " "
 
-echo "Symlink to .bash_profile has been created. Execute 'source ~/.bash_profile' or reopen your shell to complete installation."
+echo "Symlink to .bash_profile has been created."
+
+echo "Installing packages..."
+python -m pip install --upgrade pip
+python -m pip install jupyter
+python -m pip install numpy
+python -m pip install pandas
+python -m pip install matplotlib
+
+echo "Execute 'source ~/.bash_profile' or reopen your shell to complete installation."
